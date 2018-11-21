@@ -1,28 +1,9 @@
-# GOV.UK Prototype Kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-prototype-kit.svg)](https://greenkeeper.io/)
+# Severe Disability Premium Prototype
 
-Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
+## About this prototype
+The prototype is used for User Research sessions.
 
-## About the Prototype Kit
-
-The Prototype Kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
-
-Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/principles).
-
-## Security
-
-If you publish your prototypes online, they **must** be protected by a [username and password](https://govuk-prototype-kit.herokuapp.com/docs/publishing-on-heroku). This is to prevent members of the public finding prototypes and thinking they are real services.
-
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
-
-## Installation instructions
-
-- [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
-- [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
-
-## Community
-
-We have two Slack channels for the Prototype Kit. You'll need a government email address to join them.
-
-* [Slack channel for users of the Prototype Kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit/)
-* [Slack channel for developers of the Prototype Kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev/)
-# sdp-prototype
+## Research feedback from Hull sessions, 20/11/18.
+6 legacy processors used the prototype. 
+They struggled to understand how to navigate through the system. Interactions between hub pages and the worklist, and the confirmation pages to the hub pages caused a lot of difficulty.
+People also had difficulty understanding the difference between payment and decision history as the information show on these pages is similar. This is also duplicated content from the timeline. 
