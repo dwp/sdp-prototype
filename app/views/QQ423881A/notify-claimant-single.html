@@ -77,12 +77,12 @@
 
   <ul class="govuk-list">
     <li>
-      <a class="govuk-link" href="letter-preview-notify">Preview letter</a>
+      <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">Preview letter</a>
     </li>
   </ul>
 
 <h3 class="govuk-heading-m">What to do now</h3>
-<p class="govuk-body"><a href="">Download the letter PDF.</p></a>
+<p class="govuk-body"><a href="../public/images/letter-example.png" download>Download the letter PDF.</p></a>
 <p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
 <p class="govuk-body">Then copy and paste this text to the claimant's journal and upload the letter.</p>
 
@@ -100,7 +100,7 @@
   You should notify the claimant when you send them the journal message.</p>
 
 
-  <a href="../ideas/agent-dashboard"><button type="submit" class="govuk-button">
+  <a href="../dashboards/agent-dashboard"><button type="submit" class="govuk-button">
     I've notified the claimant
   </button></a>
 
@@ -132,6 +132,14 @@
     </main>
   </div>
 
-
+  <script>
+    function copyGeneratedContent() {
+      var copyText = document.getElementById("genText");
+      var copyBtn = document.getElementById("copyButton");
+      copyText.select();
+      document.execCommand("copy");
+      copyBtn.textContent = "Copied!";
+    }
+  </script>
 
 {% endblock %}
