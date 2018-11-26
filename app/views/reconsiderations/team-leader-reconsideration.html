@@ -11,8 +11,10 @@
 <div class="case-header">
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
     <span class="govuk-caption-l">Claimant details</span>
-    <a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank" class="claimantID">QQ423881A</a>
+    QQ423881A
   </h1>
+  <p class="govuk-body"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank">View claimant in Universal Credit</a></p>
+
 <strong class="govuk-tag">reconsideration</strong>
 
       <div class="govuk-grid-row">
@@ -60,7 +62,7 @@
       </tr>
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="row" width="80%">In the 'No work related requirements' work group</th>
-        <td class="govuk-table__cell">No</td>
+        <td class="govuk-table__cell">Yes</td>
       </tr>
   </table>
 
@@ -72,7 +74,7 @@
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="row" width="80%">Claimant has carer who gets Carer Element</th>
-        <td class="govuk-table__cell">Yes</td>
+        <td class="govuk-table__cell">No</td>
       </tr>
   </table>
 
@@ -101,7 +103,7 @@
       </tr>
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="row">DLA (middle or higher)</th>
-        <td class="govuk-table__cell">Yes</td>
+        <td class="govuk-table__cell">No</td>
       </tr>
       <tr class="govuk-table__row">
         <th class="govuk-table__header" scope="row">AA or CAA paid with IIDB or WP</th>
@@ -127,6 +129,83 @@
 </div>
 <hr>
 <h2 class="govuk-heading-s">Why do you agree?</h2>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          First claim date correct
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Couple status has changed
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          Couple status has not changed
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Work group and rate correct
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Single payment amount correct
+        </label>
+      </div>
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Getting Universal Credit payments
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Not getting Universal Credit payments
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Has carer who gets Carer Element
+        </label>
+      </div><div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Does not have carer who gets Carer Element
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Initial checks are correct
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+  <hr>
+
+  <h2 class="govuk-heading-s">Why do you not agree?</h2>
+
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
 
@@ -137,19 +216,60 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-            Couple status changed
+            First claim date wrong
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            Couple status has changed
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+            Couple status has not changed
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
           <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          Single payment amount correct
+            Work group and rate wrong
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Single payment amount wrong
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Claimant getting Universal Credit payment
+            Getting Universal Credit payments
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Not getting Universal Credit payments
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Has carer who gets Carer Element
+          </label>
+        </div><div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Does not have carer who gets Carer Element
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Initial checks are not correct
           </label>
         </div>
       </div>
@@ -157,7 +277,7 @@
   </div>
 
 <br>
-<a href="notify-claimant-single" id="nextpagelink">
+<a href="#" id="nextpagelink">
 <button class="govuk-button">Submit decision</button>
 </a>
         </div>
@@ -169,8 +289,7 @@
     Actions
   </h2>
   <ul class="govuk-list govuk-body-s">
-      <li><a href="" class="govuk-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61">View QQ423881A in Universal Credit</a></li>
-      <li><a href="payment-history" class="govuk-link">Payment history</a></li>
+      <li><li><a href="payment-history" class="govuk-link">Payment history</a></li>
       </ul>
 
   <p class="govuk-body govuk-!-margin-top-6"></p>
@@ -190,10 +309,10 @@
 
   <script type="text/javascript">
   function routeYes() {
-    document.getElementById("nextpagelink").href="reconsideration-1";
+    document.getElementById("nextpagelink").href="notify-claimant-agree";
   };
   function routeNo() {
-    document.getElementById("nextpagelink").href="check-eligibility-single";
+    document.getElementById("nextpagelink").href="check-carer-element-reconsideration";
   };
   </script>
 
