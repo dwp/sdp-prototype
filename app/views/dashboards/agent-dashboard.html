@@ -6,9 +6,8 @@
 
 {% block content %}
 
-<a href="../index" class="govuk-back-link">Back</a>
 <style type="text/css">
-  .dashboard__metric-value {line-height: 1; padding-right: 50px}  
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}
   a.counter-carer {color: #912b88; text-decoration: none;}
   a.counter-carer:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
   a.counter-eligibility {text-decoration: none;}
@@ -24,24 +23,17 @@
 <div id="content">
     <div class="inner-block cf js-search-filter" style="max-width: 1440px">
 
-      <div id="id-caseload-summary">`
+      <div id="id-caseload-summary">
 
 
-        <h1 class="heading-xlarge">
-          <span id="id-subtitle" class="category heading-secondary">
-          </span>
-          <span class="js-page-title">
+        <h1 class="govuk-heading-xl">
             Task dashboard
-          </span>
-          <span class="category heading-secondary">
-
-          </span>
         </h1>
 
         <div class="dashboard">
 
 
-        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
           <h2 class="dashboard__metric-heading">Check carer element</h2>
           <div class="dashboard__metric-value ">
             <a class="counter-carer" href="../task-lists/check-carer-element-task-list">
@@ -62,7 +54,7 @@
           </a>
           </div>
 
-          
+
         </div>
 
         <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
@@ -71,22 +63,22 @@
           <div aria-label="Payment accuracy" class="dashboard__metric-value dashboard__metric-value--PAYMENT_ACCURACY">
             <a class="counter-pay" href="../task-lists/raise-payment-task-list">
             11
-            
+
           </a>
           </div>
 
-          
+
         </div>
 
 
-        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">
           <h2 class="dashboard__metric-heading">Notify claimants</h2>
           <div class="dashboard__metric-value ">
-          <a 
+          <a
             class="counter-notify"
             href="../task-lists/notify-claimants-task-list">
             14
-          </a>          
+          </a>
         </div>
         </div>
 
