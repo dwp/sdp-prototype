@@ -44,5 +44,91 @@
 
     </div>
 </div>
+  <style type="text/css">
+    .dashboard__metric-value {line-height: 1; padding-right: 50px}  
+    a.counter-journal {color: #912b88; text-decoration: none;}
+    a.counter-journal:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+    a.counter-other {color: #85994b; text-decoration: none;}
+    a.counter-other:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+    a.counter-blocked {color: #005ea5; text-decoration: none;}
+    a.counter-blocked:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  </style>
+
+<main id="wrapper" data-reset-cookie-tab="">
+  <div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
+
+      <div class="switch-view">
+        <a id="id-caseload-activity" class="switch-view__link" href="/caseload-activity/ed82d922-0011-1037-9175-578abadeb0c6">
+          View recent activity
+        </a>
+      </div>
+
+      <div id="id-caseload-summary">
+
+        <h1 class="heading-xlarge">
+          <span id="id-subtitle" class="category heading-secondary">
+          </span>
+          <span class="js-page-title">
+          Cases to progress  </span>
+          <span class="category heading-secondary">
+
+          </span>
+        </h1>
+
+        <div class="dashboard">
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+          <h2 class="dashboard__metric-heading">Journal messages</h2>
+          <div class="dashboard__metric-value "> <a class="counter-journal" href="/prototype/iteration-01/dashboard-journal-04">4</a></div>
+        </div>
+
+
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_PAYMENT">
+          <h2 class="dashboard__metric-heading">Payments due</h2>
+
+          <div aria-label="Payments due" class="dashboard__metric-value dashboard__metric-value--OUTSTANDING_PAYMENT">
+            5
+          </div>
+
+          <a class="dashboard__metric-link" href="/caseload-activity/outstanding-payments/ed82d922-0011-1037-9175-578abadeb0c6">
+
+            <span class="visuallyhidden">Payments due</span>
+          </a>
+        </div>
+        <div class="dashboard__metric dashboard__metric--BLOCKED_CALCULATION">
+          <h2 class="dashboard__metric-heading">Blocked cases</h2>
+
+          <div class="dashboard__metric-value"><a class="counter-blocked" href="/prototype/iteration-01/dashboard-other-actions-01">67<span class="dashboard__metric-total">/12</span></a></div>
+
+          </a>
+        </div>
+
+        <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
+          <h2 class="dashboard__metric-heading">Payment accuracy</h2>
+
+          <div aria-label="Payment accuracy" class="dashboard__metric-value dashboard__metric-value--PAYMENT_ACCURACY">
+            11
+          </div>
+
+          <a class="dashboard__metric-link" href="/caseload-activity/payment-accuracy/ed82d922-0011-1037-9175-578abadeb0c6">
+
+            <span class="visuallyhidden">Payment accuracy</span>
+          </a>
+        </div>
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+          <h2 class="dashboard__metric-heading">Other actions</h2>
+          <div class="dashboard__metric-value "> <a class="counter-other" href="/prototype/iteration-01/dashboard-other-actions-01">14</a></div>
+        </div>
+
+      </div>
+
+
+    </main>
 
 {% endblock %}
