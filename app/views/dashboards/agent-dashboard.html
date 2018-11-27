@@ -7,40 +7,90 @@
 {% block content %}
 
 <a href="../index" class="govuk-back-link">Back</a>
-
+<style type="text/css">
+  .dashboard__metric-value {line-height: 1; padding-right: 50px}  
+  a.counter-carer {color: #912b88; text-decoration: none;}
+  a.counter-carer:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-eligibility {text-decoration: none;}
+  a.counter-eligibility:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-pay {color: #85994b; text-decoration: none;}
+  a.counter-pay:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+  a.counter-notify{color: #005ea5; text-decoration: none;}
+  a.counter-notify:hover {opacity: 0.85; border-bottom: 2px solid currentColor; display: inline-block; line-height: 0.85;}
+</style>
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper">
-  <table class="govuk-table" border="0">
+<div id="content">
+    <div class="inner-block cf js-search-filter" style="max-width: 1440px">
 
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th class="govuk-table__header" scope="col">Task list</th>
-        <th class="govuk-table__header" scope="col">Users</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="../task-lists/check-carer-element-task-list">Check carer element</a></td>
-      <td class="govuk-table__cell"><span class="badge warning">Agents</span></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="../task-lists/check-eligibility-task-list">Check eligibility</a></td>
-      <td class="govuk-table__cell"><span class="badge warning">Agents</span></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="../task-lists/raise-payment-task-list">Raise a payment</td>
-      <td class="govuk-table__cell"><span class="badge warning">Agents</span></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="../task-lists/notify-claimants-task-list">Notify claimants</a></td>
-      <td class="govuk-table__cell"><span class="badge warning">Agents</span></td>
-    </tr>
+      <div id="id-caseload-summary">`
 
-    </tbody>
 
-  </table>
+        <h1 class="heading-xlarge">
+          <span id="id-subtitle" class="category heading-secondary">
+          </span>
+          <span class="js-page-title">
+            Task dashboard
+          </span>
+          <span class="category heading-secondary">
 
+          </span>
+        </h1>
+
+        <div class="dashboard">
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+          <h2 class="dashboard__metric-heading">Check carer element</h2>
+          <div class="dashboard__metric-value ">
+            <a class="counter-carer" href="../task-lists/check-carer-element-task-list">
+              1
+            </a>
+          </div>
+        </div>
+
+
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_PAYMENT">
+          <h2 class="dashboard__metric-heading">Check eligibility</h2>
+
+          <div class="dashboard__metric-value dashboard__metric-value--OUTSTANDING_PAYMENT">
+            <a class="counter-eligibility" href="../task-lists/check-eligibility-task-list">
+          5
+          </a>
+          </div>
+
+          
+        </div>
+
+        <div class="dashboard__metric dashboard__metric--PAYMENT_ACCURACY">
+          <h2 class="dashboard__metric-heading">Raise a payment</h2>
+
+          <div aria-label="Payment accuracy" class="dashboard__metric-value dashboard__metric-value--PAYMENT_ACCURACY">
+            <a class="counter-pay" href="../task-lists/raise-payment-task-list">
+            11
+            
+          </a>
+          </div>
+
+          
+        </div>
+
+
+        <div class="dashboard__metric dashboard__metric--OUTSTANDING_JOURNAL_ENTRY">  
+          <h2 class="dashboard__metric-heading">Notify claimants</h2>
+          <div class="dashboard__metric-value ">
+          <a 
+            class="counter-notify"
+            href="../task-lists/notify-claimants-task-list">
+            14
+          </a>          
+        </div>
+        </div>
+
+      </div>
     </main>
   </div>
 
