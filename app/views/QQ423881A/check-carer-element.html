@@ -27,56 +27,56 @@
           <p class="govuk-body">You must contact QQ423881A and ask if they currently have a carer who gets the Carer Element of Universal Credit.</p>
           <hr>
           {% set carerHtml %}
-{{ govukRadios({
-  idPrefix: "has-carer-conditional",
-  name: "has-carer",
-  fieldset: {
-    legend: {
-      text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
-    }
-  },
-  items: [
-    {
-      value: "no",
-      text: "No"
-    },
-    {
-      value: "yes",
-      text: "Yes"
-    }
-  ]
-}) }}
-{% endset -%}
+          {{ govukRadios({
+            idPrefix: "has-carer-conditional",
+            name: "has-carer",
+            fieldset: {
+              legend: {
+                text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+              }
+            },
+            items: [
+              {
+                value: "no",
+                text: "No"
+              },
+              {
+                value: "yes",
+                text: "Yes"
+              }
+            ]
+          }) }}
+          {% endset -%}
 
-{{ govukRadios({
-  idPrefix: "speak-claimant-conditional",
-  name: "speak-claimant",
-  fieldset: {
-    legend: {
-      text: "Did you speak to the claimant?",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  hint: {
-    text: "Select one option."
-  },
-  items: [
-    {
-      value: "no",
-      text: "No"
-    },
-    {
-      value: "yes",
-      text: "Yes",
-      conditional: {
-        html: carerHtml
-      }
-    }
-  ]
-}) }}
+          {{ govukRadios({
+            idPrefix: "speak-claimant-conditional",
+            name: "speak-claimant",
+            fieldset: {
+              legend: {
+                text: "Did you speak to the claimant?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: "Select one option."
+            },
+            items: [
+              {
+                value: "no",
+                text: "No"
+              },
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: carerHtml
+                }
+              }
+            ]
+          }) }}
           <a href="../QQ423881A/check-eligibility-single"><button type="submit" class="govuk-button">
             Save and continue
           </button></a>
