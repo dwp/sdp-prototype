@@ -256,13 +256,13 @@ a:focus {
 
   &:focus {
     left: 0;
-    z-index: 10; 
+    z-index: 10;
   }
 }
 
 #global-header input:focus {
   outline-offset: 0;
-  outline: 3px solid #ffbf47; 
+  outline: 3px solid #ffbf47;
 }
 
 #global-header h1 a:focus {
