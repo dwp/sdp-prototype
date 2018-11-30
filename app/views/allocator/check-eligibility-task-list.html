@@ -30,7 +30,7 @@
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
 
-      <td class="govuk-table__cell govuk-table__cell"><a href="assigned-2">Sarah Williams</a></td>
+      <td class="govuk-table__cell govuk-table__cell"><a href="assigned-2">Sarah Jones</a></td>
       <td class="govuk-table__cell govuk-table__cell">
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
@@ -44,18 +44,41 @@
 </table>
 <div class="govuk-form-group">
   <label class="govuk-heading-m" for="sort">
-    Who are you reassigning to?
+    Who are you reassigning the case to?
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="published">Phil Smith</option>
-    <option value="updated" selected>Carly Simpson</option>
-    <option value="views">Jon Fellows</option>
-    <option value="comments">Simon Barker</option>
-  </select>
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+        Sarah Roberts (0 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Phil Dickinson (0 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Sue Wright (4 cases)
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Sally Bower (2 cases)
+      </label>
+    </div>
+  </div>
+</fieldset>
 </div>
+
+<a href="../dashboards/allocator-dashboard">
 <button type="submit" class="govuk-button">
-  Reassign
-</button>
+  Reassign case
+</button></a>
 
   </main>
 </div>
