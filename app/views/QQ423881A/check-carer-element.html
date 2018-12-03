@@ -26,28 +26,60 @@
           <h2 class="govuk-heading-l">Check for Carer Element</h2>
           <p class="govuk-body">You must contact QQ423881A and ask if they currently have a carer who gets the Carer Element of Universal Credit.</p>
           <hr>
+          {% set speakClaimantNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: '/task-lists/check-carer-element-task-list',
+              classes: 'govuk-button'
+            }) }}
+          {% endset -%}
+
+          {% set checkEligibiltySingle %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'check-eligibility-single',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set notifyMoneyNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'notify-claimant-no',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
           {% set carerHtml %}
-          {{ govukRadios({
-            idPrefix: "has-carer-conditional",
-            name: "has-carer",
-            fieldset: {
-              legend: {
-                text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
-              }
-            },
-            items: [
-              {
-                value: "no",
-                text: "No"
+            {{ govukRadios({
+              idPrefix: "has-carer-conditional",
+              name: "has-carer",
+              fieldset: {
+                legend: {
+                  text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                }
               },
-              {
-                value: "yes",
-                text: "Yes"
-              }
-            ]
-          }) }}
+              items: [
+                {
+                  value: "no",
+                  text: "No",
+                  conditional: {
+                    html: checkEligibiltySingle
+                  }
+                },
+                {
+                  value: "yes",
+                  text: "Yes",
+                  conditional: {
+                    html: notifyMoneyNo
+                  }
+                }
+              ]
+            }) }}
           {% endset -%}
 
           {{ govukRadios({
@@ -66,7 +98,10 @@
             items: [
               {
                 value: "no",
-                text: "No"
+                text: "No",
+                conditional: {
+                  html: speakClaimantNo
+                }
               },
               {
                 value: "yes",
@@ -77,9 +112,7 @@
               }
             ]
           }) }}
-          <a href="../QQ423881A/check-eligibility-single"><button type="submit" class="govuk-button">
-            Save and continue
-          </button></a>
+          
           <p class="govuk-body govuk-!-margin-top-8"></p>
         </div>
         <div class="govuk-grid-column-one-third">
