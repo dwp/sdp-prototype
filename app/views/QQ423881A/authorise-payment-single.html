@@ -7,7 +7,7 @@
 {% block content %}
 
 <a href="../task-lists/authorise-payment-task-list" class="govuk-back-link">Back</a>
-
+{% from "checkboxes/macro.njk" import govukCheckboxes %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
     <div class="case-header">
@@ -73,94 +73,94 @@
                       </table>
 
                       <p class="govuk-body govuk-!-margin-top-2"></p>
+                      {% set reasonsWhyNot %}
+                        {{ govukCheckboxes({
+                          idPrefix: "reasons-why-not",
+                          name: "reasonsWhyNot",
+                          fieldset: {
+                            legend: {
+                              text: "Why did you not authorise this payment?",
+                              isPageHeading: true,
+                              classes: "govuk-fieldset govuk-fieldset__legend govuk-fieldset__legend--s"
+                            }
+                          },
+                          hint: {
+                            text: "Select all that apply."
+                          },
+                          items: [
+                            {
+                              value: "uc-wrong",
+                              text: "Universal Credit payments decision wrong"
+                            },
+                            {
+                              value: "status-wrong",
+                              text: "Couple status wrong"
+                            },
+                            {
+                              value: "work-group-rate-wrong",
+                              text: "Work group and rate wrong"
+                            }
+                          ]
+                        }) }}
+                        <p class="govuk-body govuk-!-margin-top-2"></p>
+                        <hr>
+                        {{ govukButton({
+                          text: 'Submit decision',
+                          href: '/task-lists/authorise-payment-task-list',
+                          classes: 'govuk-button'
+                        }) }}
+                      {% endset -%}
 
+                      {% set cpsReference %}
+                        {{ govukInput({
+                          id: "cpsReference",
+                          name: "cpsReference",
+                          type: "number",
+                          classes: "govuk-input govuk-input--width-10",
+                          label: {
+                            text: "Enter the payment reference number from CPS."
+                          }
+                        }) }}
+                        <p class="govuk-body govuk-!-margin-top-2"></p>
+                        <hr>
+                        {{ govukButton({
+                          text: 'Submit decision',
+                          href: '/task-lists/authorise-payment-task-list',
+                          classes: 'govuk-button'
+                        }) }}
 
-                      <h3 class="govuk-heading-m">Did you authorise the payment?</h3>
+                      {%endset -%}  
 
-                      <div class="govuk-radios govuk-radios--inline">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="claim-live-yes" name="claim-live" type="radio" value="true" onclick="routeYes();">
-                          <label class="govuk-label govuk-radios__label" for="claim-live-yes">
-                            Yes
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="claim-live-no" name="claim-live" type="radio" value="false" onclick="routeNo();">
-                          <label class="govuk-label govuk-radios__label" for="claim-live-no">
-                            No
-                          </label>
-                        </div>
-                      </div>
-
-                      <p class="govuk-body govuk-!-margin-top-2"></p>
-
-                      <hr>
-
-                      <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                            <h4 class="govuk-fieldset__heading">
-                              Enter the payment reference number from CPS
-                            </h4>
-                          </legend>
-
-                          <p class="govuk-body govuk-!-margin-top-2"></p>
-
-                          <div class="govuk-form-group">
-
-                            <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
-                          </div>
-
-                          <hr>
-
-                          <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                <h4 class="govuk-fieldset__heading">
-                                  Why did you not authorise this payment?
-                                </h4>
-                              </legend>
-
-                              <div class="govuk-form-group">
-                                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-
-                                  <span id="waste-hint" class="govuk-hint">
-                                    Select all that apply
-                                  </span>
-                                  <div class="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                                      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                                        Universal Credit payments decision wrong
-                                      </label>
-                                    </div>
-                                    <div class="govuk-checkboxes__item">
-                                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                        Couple status wrong
-                                      </label>
-                                    </div>
-                                    <div class="govuk-checkboxes__item">
-                                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                        Work group and rate wrong
-                                      </label>
-                                    </div>
-                                  </div>
-                                </fieldset>
-                              </div>
-                            </fieldset>
-                          </div>
-
-                          <p class="govuk-body govuk-!-margin-top-4"></p>
-                          <hr>
-
-                          <a href="../dashboards/agent-dashboard"><button type="submit" class="govuk-button">
-                            Submit decision
-                          </button></a>
-
-                        </div>
-                      </div>
+                      {{ govukRadios({
+                        idPrefix: "auth-payment-conditional",
+                        name: "auth-payment",
+                        fieldset: {
+                          legend: {
+                            text: "Did you authorise the payment?",
+                            isPageHeading: false,
+                            classes: "govuk-fieldset__legend--m"
+                          }
+                        },
+                        hint: {
+                          text: "Select one option."
+                        },
+                        items: [
+                          {
+                            value: "no",
+                            text: "No",
+                            conditional: {
+                              html: reasonsWhyNot
+                            }
+                          },
+                          {
+                            value: "yes",
+                            text: "Yes",
+                            conditional: {
+                              html: cpsReference
+                            }
+                          }
+                        ]
+                      }) }}
 
 
                     </main>
