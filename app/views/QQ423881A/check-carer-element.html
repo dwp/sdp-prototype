@@ -7,6 +7,9 @@
 {% block content %}
 
 <a href="../task-lists/check-carer-element-task-list" class="govuk-back-link">Back</a>
+{% from "radios/macro.njk" import govukRadios %}
+{% from "input/macro.njk" import govukInput %}
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -23,60 +26,93 @@
           <h2 class="govuk-heading-l">Check for Carer Element</h2>
           <p class="govuk-body">You must contact QQ423881A and ask if they currently have a carer who gets the Carer Element of Universal Credit.</p>
           <hr>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="spoke-claimant-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h3 class="govuk-fieldset__heading">
-                  Did you speak to the claimant?
-                </h3>
-              </legend>
-              <span id="spoke-claimant-hint" class="govuk-hint">
-              </span>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="spoke-claimant-yes" name="spoke-claimant" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="spoke-claimant-yes">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="spoke-claimant-no" name="spoke-claimant" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="spoke-claimant-no">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <hr>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="carer-element-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h3 class="govuk-fieldset__heading">
-                  Do they currently have a carer who gets the Carer Element of Universal Credit?
-                </h3>
-              </legend>
-              <span id="carer-element-hint" class="govuk-hint">
-              </span>
-              <div class="govuk-radios govuk-radios--inline">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="carer-element-yes" name="carer-element" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="carer-element-yes">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="carer-element-no" name="carer-element" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="carer-element-no">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <a href="../QQ423881A/check-eligibility-single"><button type="submit" class="govuk-button">
-            Save and continue
-          </button></a>
+          {% set speakClaimantNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: '/task-lists/check-carer-element-task-list',
+              classes: 'govuk-button'
+            }) }}
+          {% endset -%}
+
+          {% set checkEligibiltySingle %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'check-eligibility-single',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set notifyMoneyNo %}
+            {{ govukButton({
+              text: 'Save and continue',
+              href: 'notify-claimant-no',
+              classes: 'govuk-button'
+            }) }}
+
+          {% endset -%}
+
+          {% set carerHtml %}
+            {{ govukRadios({
+              idPrefix: "has-carer-conditional",
+              name: "has-carer",
+              fieldset: {
+                legend: {
+                  text: "Do they currently have a carer who gets the Carer Element of Universal Credit?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                }
+              },
+              items: [
+                {
+                  value: "no",
+                  text: "No",
+                  conditional: {
+                    html: checkEligibiltySingle
+                  }
+                },
+                {
+                  value: "yes",
+                  text: "Yes",
+                  conditional: {
+                    html: notifyMoneyNo
+                  }
+                }
+              ]
+            }) }}
+          {% endset -%}
+
+          {{ govukRadios({
+            idPrefix: "speak-claimant-conditional",
+            name: "speak-claimant",
+            fieldset: {
+              legend: {
+                text: "Did you speak to the claimant?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: "Select one option."
+            },
+            items: [
+              {
+                value: "no",
+                text: "No",
+                conditional: {
+                  html: speakClaimantNo
+                }
+              },
+              {
+                value: "yes",
+                text: "Yes",
+                conditional: {
+                  html: carerHtml
+                }
+              }
+            ]
+          }) }}
+          
           <p class="govuk-body govuk-!-margin-top-8"></p>
         </div>
         <div class="govuk-grid-column-one-third">
