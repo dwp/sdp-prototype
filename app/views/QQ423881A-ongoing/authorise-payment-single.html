@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<a href="../task-lists/authorise-payment-task-list" class="govuk-back-link">Back</a>
+<a href="authorise-payment-task-list" class="govuk-back-link">Back</a>
 {% from "checkboxes/macro.njk" import govukCheckboxes %}
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper">
@@ -58,16 +58,16 @@
                             <td class="govuk-table__cell">Intensive work search</td>
                           </tr>
                           <tr class="govuk-table__row">
-                            <th class="govuk-table__header" scope="row">APs since first UC claim date</th>
-                            <td class="govuk-table__cell">27</td>
+                            <th class="govuk-table__header" scope="row">Last AP ended</th>
+                            <td class="govuk-table__cell">31 October 2018</td>
                           </tr>
                           <tr class="govuk-table__row">
-                            <th class="govuk-table__header" scope="row">Monthly SDP rate</th>
+                            <th class="govuk-table__header" scope="row">Last AP started</th>
+                            <td class="govuk-table__cell">1 October 2018</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="row">Monthly payment amount</th>
                             <td class="govuk-table__cell">£80</td>
-                          </tr>
-                          <tr class="govuk-table__row">
-                            <th class="govuk-table__header" scope="row">Single payment amount</th>
-                            <td class="govuk-table__cell">£2,160</td>
                           </tr>
                         </tbody>
                       </table>
@@ -106,7 +106,7 @@
                         <hr>
                         {{ govukButton({
                           text: 'Submit decision',
-                          href: '/task-lists/authorise-payment-task-list',
+                          href: 'authorise-payment-task-list',
                           classes: 'govuk-button'
                         }) }}
                       {% endset -%}
@@ -125,7 +125,7 @@
                         <hr>
                         {{ govukButton({
                           text: 'Submit decision',
-                          href: '/task-lists/authorise-payment-task-list',
+                          href: 'authorise-payment-task-list',
                           classes: 'govuk-button'
                         }) }}
 
@@ -183,7 +183,7 @@
                   <li><a href="authorise-payment-single-history" class="govuk-link">Task history</a></li>
                 </ul>
                 <ul class="govuk-list govuk-body-s">
-                  <li><a href="authorise-payment-single-history" class="govuk-link">Payment history</a></li>
+                  <li><a href="payment-history-authorise" class="govuk-link">Payment history</a></li>
                 </ul>
 
                 <p class="govuk-body govuk-!-margin-top-6"></p>
