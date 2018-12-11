@@ -395,5 +395,64 @@ input.form-control.block {
   width: 100%;
 }
 
+.govuk-details__summary-text-amended {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 800;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 0;
+  color: #005ea5;
+  text-decoration: none;
+}
+
+.accordian-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.accordian-overview {
+  display: block;
+  width: auto;
+  border: 0px solid grey;
+  border-bottom: 1px solid #BFC1C3;
+  padding: 1rem 0rem;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: 	#005ea5;
+  position: relative;
+  padding-right: 5rem;
+}
+
+.accordian-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 100%;
+  background-color: white;
+  background-image: url('/public/images/accordian-open.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.open-all {
+  display: block;
+  width: auto;
+  border: none;
+  border-bottom: 1px solid #BFC1C3;
+  // padding: 1rem 50rem;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: 	#005ea5;
+  position: relative;
+  padding-right: 0rem;
+  padding-left: 55rem;
+}
+
+
+
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
