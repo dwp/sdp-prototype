@@ -59,18 +59,102 @@
                       </table>
                     </div>
                   </div>
-                  <h3 class="govuk-heading-m govuk-!-margin-top-2">Raise a single payment of £2,000 in CPS</h3>
+
+
+
+                  <h3 class="govuk-heading-m govuk-!-margin-top-2">Do you want raise a payment for £2,000 in CPS?</h3>
 
 
                   <p class="govuk-body">You'll need to follow the guidance for raising and authorising a payment of SDP in CPS.</p>
 
-                  <a href="../dashboards/agent-dashboard"><button type="submit" class="govuk-button">
-                    I've requested a payment
-                  </button></a>
+                  {% set speakClaimantNo %}
+
+                     Eligibility checks will need to be made again <br>
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'check-eligibility-single',
+                      classes: 'govuk-button'
+                    }) }}
+                  {% endset -%}
+
+                  {% set checkEligibiltySingle %}
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'check-eligibility-single',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {% set notifyMoneyNo %}
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: 'notify-claimant-no',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {% set carerHtml %}
+                    {{ govukRadios({
+                      idPrefix: "has-carer-conditional",
+                      name: "has-carer",
+                      fieldset: {
+                        legend: {
+                          text: "This payment will be sent for authorisation",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+                        }
+                      },
+                      items: [
+
+                      ]
+                    }) }}
+
+                    {{ govukButton({
+                      text: 'Save and continue',
+                      href: '/dashboards/agent-dashboard',
+                      classes: 'govuk-button'
+                    }) }}
+
+                  {% endset -%}
+
+                  {{ govukRadios({
+                    idPrefix: "speak-claimant-conditional",
+                    name: "speak-claimant",
+                    fieldset: {
+                      legend: {
+                        text: "",
+                        isPageHeading: false,
+                        classes: "govuk-fieldset__legend--m"
+
+                      }
+                    },
+
+                    items: [
+                      {
+                        value: "no",
+                        text: "No",
+                        conditional: {
+                          html: speakClaimantNo
+                        }
+                      },
+                      {
+                        value: "yes",
+                        text: "Yes",
+                        conditional: {
+                          html: carerHtml
+                        }
+                      }
+                    ]
+                  }) }}
 
                 </main>
               </div>
             </div>
+
 
 
             <p class="govuk-body govuk-!-margin-top-8"></p>
