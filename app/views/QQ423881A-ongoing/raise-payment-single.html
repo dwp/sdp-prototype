@@ -57,12 +57,11 @@
                   </div>
                   <h3 class="govuk-heading-m govuk-!-margin-top-2">Do you want raise a payment for £80 in CPS?</h3>
 
-
-                  <p class="govuk-body">You'll need to follow the guidance for raising and authorising a payment of SDP in CPS.</p>
-
                   {% set speakClaimantNo %}
 
-                     Eligibility checks will need to be made again <br>
+                  You'll need to make the eligibility checks again.
+                  <br>
+<br>
 
                     {{ govukButton({
                       text: 'Save and continue',
@@ -96,7 +95,7 @@
                       name: "has-carer",
                       fieldset: {
                         legend: {
-                          text: "This payment will be sent for authorisation",
+                          text: "You'll need to follow the guidance for raising and authorising a payment in CPS.",
                           isPageHeading: true,
                           classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
                         }
@@ -105,7 +104,7 @@
 
                       ]
                     }) }}
-
+<br>
                     {{ govukButton({
                       text: 'Save and continue',
                       href: '/dashboards/agent-ongoing-dashboard',
