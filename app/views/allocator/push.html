@@ -6,14 +6,16 @@
 
 {% block content %}
 
-<a href="../allocator/assigned-1" class="govuk-back-link">Back</a>
+<a href="../dashboards/allocator-dashboard" class="govuk-back-link">Back</a>
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper">
 <div class="case-header">
   <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-    <span class="govuk-caption-l">Processor name</span>
-    Sarah Jones
+    <!-- <span class="govuk-caption-l">Assigned cases</span> -->
+    Assigned cases
+
+
   </h1>
 
 <br>
@@ -21,70 +23,58 @@
 
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th class="govuk-table__header" scope="col">Claimant ID</th>
-        <th class="govuk-table__header govuk-table__header" scope="col">Status</th>
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header govuk-table__header" scope="col">Number of cases</th>
         <th class="govuk-table__header govuk-table__header" scope="col">Action</th>
         <th class="govuk-table__header govuk-table__header" scope="col">Action</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-table__cell"><a href="../allocator/assigned-2">QQ423881A</a></th>
-        <td class="govuk-table__cell govuk-table__cell">Check carer element</th>
-
-        <td class="govuk-table__cell govuk-table__cell"><a href="reassign-2" class="govuk-link">Reassign to an individual</a></th>
-          <td class="govuk-table__cell govuk-table__cell"><a href="push-2" class="govuk-link">Reassign to a site</a></th>
-      </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-table__cell"><a href="../allocator/assigned-2">QQ42asfrB</a></th>
-        <td class="govuk-table__cell govuk-table__cell">Raise payment</th>
-
-            <td class="govuk-table__cell govuk-table__cell"><a href="reassign-2" class="govuk-link">Reassign to an individual</a></th>
-            <td class="govuk-table__cell govuk-table__cell"><a href="push-2" class="govuk-link">Reassign to a site</a></th>
-        </tr>
+        <td class="govuk-table__cell govuk-table__cell"><a href="../allocator/assigned-2">Sarah Jones</a></th>
+        <td class="govuk-table__cell govuk-table__cell">2</th>
+          <td class="govuk-table__cell govuk-table__cell"><a href="reassign" class="govuk-link">Reassign to an individual</a></th>
+          <td class="govuk-table__cell govuk-table__cell"><a href="push" class="govuk-link">Reassign to a site</a></th>
       </tr>
     </tbody>
   </table>
-<!--
+
+
+
 
   <div class="govuk-form-group">
     <label class="govuk-heading-m" for="sort">
-      Who are you reassigning the cases to?
+      Which site would you like to reassign the cases to?
     </label>
 
     <div class="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
         <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-          Sarah Roberts (0 cases)
+          Clydebank (240 cases)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
         <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          Phil Dickinson (0 cases)
+          Chatham (540 cases)
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
         <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Sue Wright (4 cases)
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Sally Bower (2 cases)
+          Chesterfield (140 cases)
         </label>
       </div>
     </div>
   </fieldset>
 
   </div>
+
   <a href="../dashboards/allocator-dashboard">
   <button type="submit" class="govuk-button">
     Reassign
-  </button></a> -->
+  </button></a>
 
     </main>
   </div>
