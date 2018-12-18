@@ -109,7 +109,17 @@
 
                       ]
                     }) }}
-<br>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Select authoriser:
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Jon Smith</option>
+    <option value="updated" selected>Ruth Johnson</option>
+    <option value="views">Sarah Jones</option>
+    <option value="comments">Sam Wilkinson</option>
+  </select>
+</div><br>
                     {{ govukButton({
                       text: 'Save and continue',
                       href: '/dashboards/agent-dashboard',
