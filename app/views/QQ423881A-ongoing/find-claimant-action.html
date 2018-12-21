@@ -6,12 +6,13 @@
 
 {% block content %}
 
+
 <div class="govuk-width-container">
 
 <main class="govuk-main-wrapper">
 <div class="key-details-bar">
 <h1 class="key-details-ni">
-
+  <!-- <span class="key-details-claimant-details">Claimant details</span><br> -->
   <span class="key-details-claimant-ni">QQ423881A</span>
   <div class="key-details-tag" style="float: right;">NOTIFY CLAIMANT - MONTHLY</div>
   <p class="govuk-body govuk-!-margin-bottom-1"></p>
@@ -23,11 +24,14 @@
 <div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
   target="_blank">View claimant in Universal Credit</a>
 </div>
-<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
-</div>
+<div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div>
 
+</div>
+<!-- <br>
+<span class="circle teal"></span><strong>Working on this case:</strong> You<br><br> -->
 
 <p class="govuk-body govuk-!-margin-bottom-4"></p>
+
 
 <main id="content" role="main">
   <div class="grid-row">
@@ -39,10 +43,10 @@
             <a href="" class="active" aria-current="section">Next case action</a>
           </li>
           <li>
-            <a href="notify-claimant-single-history">Case history</a>
+            <a href="find-claimant-history">Case history</a>
           </li>
           <li>
-            <a href="payment-history-notify">Payment history</a>
+            <a href="find-claimant-payment">Payment history</a>
           </li>
         </ul>
       </nav>
@@ -51,13 +55,16 @@
 </main>
 
 
-  <p class="govuk-body govuk-!-margin-bottom-8"></p>
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+          <p class="govuk-body govuk-!-margin-bottom-8"></p>
 
           <h2 class="govuk-heading-xl">Tell the claimant about a monthly payment</h2>
-          <p class="govuk-body">You need to create a letter to notify the claimant we've paid them a monthly amount of SDP, and upload it to their journal.</p>
+          <p class="govuk-body">You need to tell the claimant that we've paid them a monthly SDP amount.</p>
 
 
-          <fieldset class="govuk-fieldset">
+          <!-- <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h3 class="govuk-fieldset__heading">
                 What are the claimant's contact details in Universal Credit?
@@ -93,19 +100,19 @@
             <li>
               <a class="govuk-link" href="qq423881a-letter-preview" target="_blank">Preview letter</a>
             </li>
-          </ul>
+          </ul> -->
 
           <h3 class="govuk-heading-m">What to do now</h3>
-          <p class="govuk-body"><a href="../public/images/letter-example.png" download>Download the letter PDF.</p></a>
-          <p class="govuk-body">The letter will be saved in your 'downloads' folder.</p>
-          <p class="govuk-body">Then copy and paste this text to the claimant's journal and upload the letter.</p>
+          <!-- <p class="govuk-body"><a href="../public/images/letter-example.png" download>Download the letter PDF.</p></a> -->
+          <!-- <p class="govuk-body">The letter will be saved in your 'downloads' folder.</p> -->
+          <p class="govuk-body">Copy and paste this text to the claimant's journal.</p>
 
           <div class="app-tabs__container js-tabs__container app-tabs__container--with-close-button" id="example-default-html" role="tabpanel" aria-hidden="false">
             <button id="copyButton" onclick="copyGeneratedContent()" class="app-copy-button js-copy-button" aria-live="assertive">Copy</button>
             <textarea id="genText" rows="4" cols="70" style="resize:none;" class="textarea">
 
 
-              A monthly payment of £80 was made on 31 October 2018.
+          An extra Universal Credit payment of £80 was made on 3 oct 2018
             </textarea>
           </pre>
         </div>
@@ -119,20 +126,19 @@
           </button></a>
 
         </div>
-      </div>
+
+
+        </div>
+
+      </ul>
+
 
     </div>
 
+  </div>
 
-    </div>
-
-          </div>
-
-        </main>
-      </div>
-
-
-
+</main>
+</div>
 
 <script>
 function copyGeneratedContent() {

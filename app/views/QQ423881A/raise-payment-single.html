@@ -7,22 +7,56 @@
 {% block content %}
 
 <div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-    <div class="case-header">
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-0">
-        <span class="govuk-caption-l">Claimant details</span>
-        QQ423881A
-      </h1>
-      <p class="govuk-body"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61" target="_blank">View claimant in Universal Credit</a></p>
-      <strong class="govuk-tag">raise payment - single</strong>
+
+<main class="govuk-main-wrapper">
+<div class="key-details-bar">
+<h1 class="key-details-ni">
+
+  <span class="key-details-claimant-ni">QQ423881A</span>
+  <div class="key-details-tag" style="float: right;">RAISE PAYMENT - SINGLE</div>
+  <p class="govuk-body govuk-!-margin-bottom-1"></p>
+</h1>
+
+<hr class="key-details-line">
+<p class="govuk-body govuk-!-margin-bottom-3"></p>
+
+<div class="key-details-link"><a href="https://agent-training03.ucd.gpn.gov.uk/agent/claimant-actions/d6ad9130-7d8e-4094-a16f-1ca3745baa70/contract/56ead4de-5cf6-47b5-8d08-67ee6cd2dc61"
+  target="_blank">View claimant in Universal Credit</a>
+</div>
+<!-- <div class="key-details-working-on" style="float: right;"><strong>Working on this case:</strong> You</div> -->
+</div>
 
 
+<p class="govuk-body govuk-!-margin-bottom-4"></p>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <nav class="navigation-secondary">
+        <ul>
+          <li>
+            <a href="" class="active" aria-current="section">Next case action</a>
+          </li>
+          <li>
+            <a href="raise-payment-single-history">Case history</a>
+          </li>
+          <!-- <li>
+            <a href="find-claimant-payment">Payment history</a>
+          </li> -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+
+  <p class="govuk-body govuk-!-margin-bottom-8"></p>
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <hr>
+        <div class="govuk-grid-column-full">
 
-          <h3 class="govuk-heading-l">The claimant is eligible for a single payment of SDP</h3>
+
+          <h3 class="govuk-heading-xl">The claimant is eligible for a single payment of SDP</h3>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
 
@@ -158,42 +192,18 @@
                     ]
                   }) }}
 
-                </main>
+                </div>
+
               </div>
-            </div>
+
+
+              </div>
+
+                    </div>
+
+                  </main>
+                </div>
 
 
 
-            <p class="govuk-body govuk-!-margin-top-8"></p>
-
-
-          </div>
-
-          <div class="govuk-grid-column-one-third">
-            <p class="govuk-body govuk-!-margin-top-6"></p>
-            <div class="app-related-items">
-              <h2 class="govuk-heading-s">
-                Actions
-              </h2>
-              <ul class="govuk-list govuk-body-s">
-                <li><a href="raise-payment-single-history" class="govuk-link">Case history</a></li>
-              </ul>
-
-              <p class="govuk-body govuk-!-margin-top-6"></p>
-
-            </div>
-          </div>
-
-        </ul>
-
-
-      </div>
-
-    </div>
-
-  </main>
-</div>
-
-
-
-{% endblock %}
+              {% endblock %}

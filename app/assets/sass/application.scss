@@ -461,6 +461,142 @@ input.form-control.block {
   padding-left: 55rem;
 }
 
+.navigation-secondary ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation-secondary {
+  border-bottom: 1px solid #bfc1c3;
+  margin: auto;
+  max-width: 960px;
+}
+
+.navigation-secondary ul {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.navigation-secondary li {
+  float: left;
+  list-style-type: none;
+  margin-bottom: auto;
+}
+
+@media (max-width: 640px) {
+  .navigation-secondary li {
+    border: 0;
+    width: 100%;
+  }
+}
+
+.navigation-secondary a {
+  display: block;
+  padding: 15px;
+}
+
+.navigation-secondary a:visited {
+  color: #005ea5;
+}
+
+.navigation-secondary a:hover {
+  background-color: #f8f8f8;
+}
+
+.navigation-secondary .active {
+  box-shadow: inset 0px -5px 0px 0px #005ea5;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+.navigation-secondary .active:visited {
+  color: #0b0c0c;
+}
+
+.key-details-bar {
+  background-color: #005ea5;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px 30px;
+  color: #ffffff;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.key-details-link {
+  margin: 0 auto;
+  max-width: 960px;
+  color: #ffffff;
+  position: relative;
+}
+
+.key-details-ni {
+  margin: 0 auto;
+  color: #ffffff;
+  font-weight: bold;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 38px;
+}
+
+.key-details-claimant-details {
+  margin: 0 auto;
+  color: #ffffff;
+  font-weight: 300;
+  position: relative;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.key-details-working-on {
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+  margin-top: -20px;
+  font-size: 18px;
+}
+
+.key-details-line {
+  margin: 0 auto;
+  color: #ffffff;
+  display: block;
+  background: #528FC1;
+  border: 0;
+  height: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+
+.key-details-link a {
+  color: #ffffff;
+
+}
+
+.key-details-link a:visited {
+  color: #ffffff;
+}
+
+.key-details-link a:hover {
+  color: #99BFDB;
+}
+
+.key-details-tag {
+  background-color: #fff;
+  color: #005ea5;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+}
 
 
 
