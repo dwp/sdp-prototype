@@ -201,6 +201,13 @@ hr {
     box-shadow: 0 2px 0 #a8adb2;
 }
 
+.govuk-button--secondary:visited {
+    background-color: #F0F0F0;
+    color: #999999;
+    box-shadow: 0 2px 0 #a8adb2;
+}
+
+
 
 .govuk-button--secondary:link, .govuk-button--secondary:visited, .govuk-button--secondary:active, .govuk-button--secondary:hover {
     color: #0b0c0c;
