@@ -29,3 +29,14 @@ router.post('/check-eligibility-single', (req, res) => {
 });
 
 module.exports = router
+
+router.post('/check-eligibility-monthly', (req, res) => {
+  if(req.body.gettingUc === 'No' || req.body.bereavement === 'No') {
+    return res.redirect('/QQ423881A-ongoing/notify-claimant-no');
+  } else {
+    return res.redirect('/QQ423881A-ongoing/raise-payment-single');
+  }
+  res.send(req.body);
+});
+
+module.exports = router
