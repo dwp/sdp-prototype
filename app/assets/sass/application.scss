@@ -619,6 +619,21 @@ input.form-control.block {
   text-align: right;
 }
 
+.task-tag-nosteps {
+  background-color: #005ea5;
+  color: #FFF;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1px 8px 0;
+  margin-top: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: right;
+}
+
 .app-step-nav-header {
   position: relative;
   padding: 10px;
