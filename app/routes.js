@@ -19,4 +19,13 @@ router.post('claim-eligible', function (req, res) {
   }
 })
 
+router.post('/check-eligibility-single', (req, res) => {
+  if(req.body.gettingUc === 'No' || req.body.bereavement === 'No') {
+    return res.redirect('/QQ423881A/notify-claimant-no');
+  } else {
+    return res.redirect('/QQ423881A/raise-payment-single');
+  }
+  res.send(req.body);
+});
+
 module.exports = router
