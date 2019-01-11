@@ -102,36 +102,8 @@
 
                       <p class="govuk-body govuk-!-margin-top-2"></p>
                       {% set reasonsWhyNot %}
-                        {{ govukCheckboxes({
-                          idPrefix: "reasons-why-not",
-                          name: "reasonsWhyNot",
-                          fieldset: {
-                            legend: {
-                              text: "Why did you not authorise this payment?",
-                              isPageHeading: true,
-                              classes: "govuk-fieldset govuk-fieldset__legend govuk-fieldset__legend--s"
-                            }
-                          },
-                          hint: {
-                            text: "Select all that apply."
-                          },
-                          items: [
-                            {
-                              value: "uc-wrong",
-                              text: "Universal Credit payments decision wrong"
-                            },
-                            {
-                              value: "status-wrong",
-                              text: "Couple status wrong"
-                            },
-                            {
-                              value: "work-group-rate-wrong",
-                              text: "Work group and rate wrong"
-                            }
-                          ]
-                        }) }}
                         <p class="govuk-body govuk-!-margin-top-2"></p>
-                        <hr>
+
                         {{ govukButton({
                           text: 'Submit decision',
                           href: 'authorise-payment-task-list',
@@ -150,7 +122,7 @@
                           }
                         }) }}
                         <p class="govuk-body govuk-!-margin-top-2"></p>
-                        <hr>
+
                         {{ govukButton({
                           text: 'Submit decision',
                           href: 'authorise-payment-task-list',
