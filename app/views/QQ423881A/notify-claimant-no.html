@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<a href="check-eligibility-single" class="govuk-back-link">Edit eligibility details</a>
+<!-- <a href="check-eligibility-single" class="govuk-back-link">Edit eligibility details</a> -->
 <div class="govuk-width-container">
 
 <main class="govuk-main-wrapper">
@@ -116,23 +116,103 @@ Download the letter PDF</a>
 <p class="govuk-body govuk-!-margin-top-4">
   You should notify the claimant when you send them the journal message.</p>
 
+<h3 class="govuk-heading-m">Have you notified the claimant?</h3>
 
-  <a href="../dashboards/agent-dashboard"><button type="submit" class="govuk-button">
-    I've notified the claimant
-  </button></a>
+  {% set speakClaimantNo %}
+
+     You'll need to make the eligibility checks again.
+     <br>
+<br>
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'check-eligibility-single',
+      classes: 'govuk-button'
+    }) }}
+  {% endset -%}
+
+  {% set checkEligibiltySingle %}
+
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'check-eligibility-single',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {% set notifyMoneyNo %}
+    {{ govukButton({
+      text: 'Save and continue',
+      href: 'notify-claimant-no',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {% set carerHtml %}
+    {{ govukRadios({
+      idPrefix: "has-carer-conditional",
+      name: "has-carer",
+      fieldset: {
+        legend: {
+          text: "",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--m govuk-fieldset__heading"
+        }
+      },
+      items: [
+
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: 'Save and continue',
+      href: '/dashboards/agent-dashboard',
+      classes: 'govuk-button'
+    }) }}
+
+  {% endset -%}
+
+  {{ govukRadios({
+    idPrefix: "speak-claimant-conditional",
+    name: "speak-claimant",
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: false,
+        classes: "govuk-fieldset__legend--m"
+
+      }
+    },
+
+    items: [
+      {
+        value: "no",
+        text: "No",
+        conditional: {
+          html: speakClaimantNo
+        }
+      },
+      {
+        value: "yes",
+        text: "Yes",
+        conditional: {
+          html: carerHtml
+        }
+      }
+    ]
+  }) }}
 
 </div>
 
 </div>
 
-</div>
-
 
 </div>
 
-  </div>
+    </div>
 
-</main>
+  </main>
 </div>
 
 
